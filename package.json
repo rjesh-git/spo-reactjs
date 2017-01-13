@@ -1,0 +1,32 @@
+{
+  "name": "spo-reactjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjesh-git/spo-reactjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjesh-git/spo-reactjs/issues"
+  },
+  "homepage": "https://github.com/rjesh-git/spo-reactjs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-spsave": "^3.0.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8"
+  }
+}
