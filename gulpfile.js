@@ -4,6 +4,7 @@ const gutil = require("gulp-util");
 const concat = require("gulp-concat");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
+const cleanCSS = require("gulp-clean-css");
 const flatten = require("gulp-flatten");
 const stripDebug = require("gulp-strip-debug"); 
 const rename = require("gulp-rename");
@@ -15,12 +16,27 @@ const cssPath = "styles";
 const deployPath = "dist";
 const siteUrl = "https://sadacloud.sharepoint.com/sites/rajesh";
 const spJSPath = "Style%20Library/rajesh/js";
+const spCSSPath = "Style%20Library/rajesh/CSS";
+
+// gulp.task("jsx", () => {
+//     gulp.src(["src/*.jsx","src/**/*.jsx"])
+//     .pipe(sourcemaps.init())
+//     .pipe(babel({
+//         presets: ['latest','react']
+//     }))
+//     .pipe(gulp.dest("src/js"))
+//     .pipe(concat("all.min.js", {newLine: ";"}))
+//   .pipe(uglify())
+//   .pipe(sourcemaps.write())
+//   .pipe(gulp.dest(`${deployPath}/JS`));
+
+// });
 
 gulp.task("js", () => {
-  gulp.src([`${jsPath}/*.js`, `${jsPath}/**/*.js`])
+  gulp.src([`${jsPath}/*.jsx`, `${jsPath}/**/*.jsx`,`${jsPath}/*.js`, `${jsPath}/**/*.js`])
   .pipe(sourcemaps.init())
   .pipe(babel({
-    presets: ['latest']
+    presets: ['latest', 'react']
   }))
   .pipe(concat("all.min.js", {newLine: ";"}))
   .pipe(uglify())
@@ -46,5 +62,14 @@ gulp.task('upload-js-to-sp', function () {
       }, creds));
 });
 
+gulp.task('upload-css-to-sp', function () {
+  return gulp.src([`${deployPath}/CSS/*.css`])
+      .pipe(spsave({
+        siteUrl: siteUrl,
+        folder: spCSSPath,
+        checkin: true,
+        checkinType: 1
+      }, creds));
+});
 
-gulp.task("default", ['js','upload-js-to-sp']);
+gulp.task("default", ['js','css','upload-js-to-sp','upload-css-to-sp']);

@@ -1,0 +1,225 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+.ms-core-pageTitle {
+    visibility: hidden !important;
+}
+
+#DeltaPlaceHolderMain {
+    margin-left: 0 !important;
+}
+
+#s4-bodyContainer {
+    padding-bottom: 0;
+}
+
+#contentBox {
+    margin: 0 auto 0 30px;
+}
+
+.lkl-sitetitle-div {
+    display: none !important;
+}
+
+a.lkl-link-a {
+    color: #666;
+}
+
+a.lkl-link-a:hover {
+    text-decoration: underline;
+}
+
+a.lkl-link-a-more {
+    color: #0083a9;
+    text-transform: uppercase;
+    float: right;
+    font-size: 0.75em;
+}
+
+.ms-webpart-titleText.ms-webpart-titleText,
+.ms-webpart-titleText>a {
+    color: #000;
+    font-family: "PT Sans", "Open Sans", Arial, sans-serif;
+    font-size: 1.5em !important;
+}
+
+
+/*
+.cbs-pictureOnTopContainer .cbs-pictureOnTopLine1Link {
+  color: $crimson;
+  h2.ms-accentText2 {
+    color: $crimson;
+  }
+}
+*/
+
+
+/* Announcements */
+
+.lkl-announcement-ul .lkl-announcement-line-1,
+.lkl-announcement-ul .lkl-announcement-line-2 {
+    max-width: 360px;
+}
+
+.lkl-announcement-ul a.lkl-announcement-line-1-link {
+    color: #0083a9;
+}
+
+.lkl-announcement-ul .lkl-announcement-line-2 {
+    color: #666;
+}
+
+
+/* Action Center */
+
+ul.lkl-events-ul.cbs-List li.wp-event-li {
+    display: inline-block;
+    width: 49%;
+}
+
+ul.lkl-events-ul.cbs-List .wp-event-container {
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 1.5em;
+}
+
+ul.lkl-events-ul.cbs-List .wp-event-container:before {
+    content: "\f073";
+    font-family: FontAwesome;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #0083a9;
+}
+
+ul.lkl-events-ul.cbs-List .wp-event-summary p {
+    margin: 0;
+    color: #666;
+}
+
+ul.lkl-events-ul.cbs-List .wp-event-titlelink {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: block;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 769px) {
+    #sideNavBox {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #sideNavBox {
+        visibility: hidden;
+        margin: 0 0 0 -220px;
+        padding: 0 0 0 20px;
+    }
+    body #contentRow {
+        margin: 0 !important;
+    }
+    body.shownav #sideNavBox {
+        visibility: visible;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body #s4-bodyContainer {
+        margin: 0 !important;
+        background: none;
+    }
+    body.shownav #contentRow {
+        margin-left: 0;
+    }
+}
+
+.resource-links {
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+.resource-links a.link {
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: block;
+}
+
+.resource-links a.link:hover {
+    text-decoration: none;
+}
+
+.resource-links .link-list {
+    list-style-type: none;
+    max-width: 360px;
+    min-width: 360px;
+    padding: 0 20px 0 0;
+}
+
+.resource-links .block {
+    background: #0083a9;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 15px 0 15px 20px;
+}
+
+.resource-links .block .text {
+    margin-left: 30px;
+    vertical-align: top;
+    line-height: 36px;
+}
+
+.resource-links .block .fa {
+    font-size: 32px;
+}
+
+.applications {
+    list-style-type: none;
+    width: 360px;
+    padding: 0;
+}
+
+.applications .app {
+    display: inline-block;
+    width: 116px;
+    margin: 0 auto 2em 0;
+}
+
+.applications .app .fa-circle {
+    color: #0083a9;
+}
+
+.applications .app .fa-cogs {
+    color: #ffc324;
+}
+
+.applications .app:nth-child(n+4):nth-child(-n+6) .fa-circle {
+    color: #ffc324;
+}
+
+.applications .app:nth-child(n+4):nth-child(-n+6) .fa-cogs {
+    color: #0083a9;
+}
+
+.applications a.link {
+    color: black;
+    display: block;
+    text-align: center;
+    margin-left: -32px;
+}
+
+.applications a.link:hover {
+    text-decoration: none;
+}
+
+.ll-sites {
+    min-width: 360px;
+    height: 2em;
+    font-size: 1.25em;
+    color: #666;
+}
