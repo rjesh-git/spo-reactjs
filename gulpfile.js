@@ -1,6 +1,6 @@
 const creds = require("./settings.js");
 const gulp = require("gulp");
-const gutil = require("gulp-util");
+/*const gutil = require("gulp-util");
 const concat = require("gulp-concat");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
@@ -8,7 +8,7 @@ const cleanCSS = require("gulp-clean-css");
 const flatten = require("gulp-flatten");
 const stripDebug = require("gulp-strip-debug"); 
 const rename = require("gulp-rename");
-const babel = require("gulp-babel");
+const babel = require("gulp-babel");*/
 const spsave = require("gulp-spsave");
 
 const jsPath = "src";
@@ -30,13 +30,13 @@ gulp.task("js", () => {
   .pipe(gulp.dest(`${deployPath}/JS`));
 });
 
-gulp.task("css", () => {
+/*gulp.task("css", () => {
   gulp.src(`${cssPath}/*.css`)
   .pipe(sourcemaps.init())
   .pipe(cleanCSS())
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(`${deployPath}/CSS`));
-});
+});*/
 
 gulp.task('upload-js-to-sp', function () {
   return gulp.src([`${deployPath}/JS/*.js`])

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "deploy": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,16 +26,9 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^2.3.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-flatten": "^0.3.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.4.0",
     "gulp-spsave": "^3.0.0",
-    "gulp-strip-debug": "^1.1.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.8",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "spsave-webpack-plugin": "^1.0.4"
   }
 }
