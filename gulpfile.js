@@ -1,4 +1,4 @@
-const creds = require("./settings.js");
+const creds = require("./src/configuration/config.js");
 const gulp = require("gulp");
 /*const gutil = require("gulp-util");
 const concat = require("gulp-concat");
