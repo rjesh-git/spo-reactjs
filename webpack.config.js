@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const SPSaveWebpackPlugin = require('spave-webpack-plugin');
 const creds = require("./settings.js");
 
 const siteUrl = "https://sadacloud.sharepoint.com/sites/rajesh";
@@ -15,18 +14,7 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
-        new SPSaveWebpackPlugin({
-            "coreOptions": {
-                "checkin": true,
-                "checkinType": 1,
-                "siteUrl": siteUrl
-            },
-            "credentialOptions": creds,
-            "fileOptions": {
-                "folder": spJSPath
-            }
-        })
+        new webpack.optimize.UglifyJsPlugin()        
     ],
     module: {
         rules: [{

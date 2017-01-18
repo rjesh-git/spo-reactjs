@@ -18,20 +18,6 @@ const siteUrl = "https://sadacloud.sharepoint.com/sites/rajesh";
 const spJSPath = "Style%20Library/rajesh/js";
 const spCSSPath = "Style%20Library/rajesh/CSS";
 
-// gulp.task("jsx", () => {
-//     gulp.src(["src/*.jsx","src/**/*.jsx"])
-//     .pipe(sourcemaps.init())
-//     .pipe(babel({
-//         presets: ['latest','react']
-//     }))
-//     .pipe(gulp.dest("src/js"))
-//     .pipe(concat("all.min.js", {newLine: ";"}))
-//   .pipe(uglify())
-//   .pipe(sourcemaps.write())
-//   .pipe(gulp.dest(`${deployPath}/JS`));
-
-// });
-
 gulp.task("js", () => {
   gulp.src([`${jsPath}/*.jsx`, `${jsPath}/**/*.jsx`,`${jsPath}/*.js`, `${jsPath}/**/*.js`])
   .pipe(sourcemaps.init())
@@ -72,4 +58,4 @@ gulp.task('upload-css-to-sp', function () {
       }, creds));
 });
 
-gulp.task("default", ['js','css','upload-js-to-sp','upload-css-to-sp']);
+gulp.task("default", ['upload-js-to-sp','upload-css-to-sp']);
