@@ -6,4 +6,4 @@ class Hello extends React.Component {
     );
   }
 }
-ReactDOM.render(<Hello name="RajeshS"/>, document.getElementById("app"));
+ReactDOM.render(<Hello name="Rajesh Sitaraman"/>, document.getElementById("app"));
